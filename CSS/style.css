@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255),rgb(0, 140, 255));
+    background-size: auto;
+}
+.back-ground {
+    background-image: linear-gradient(to bottom right, rgb(0, 140, 255), rgb(255, 255, 255));
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width: 80%;
+    margin-top: 10px;
+    margin-left:10%;
+
+}
+.banner_text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Playfair Display SC', serif;
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+        margin:0;
+        background-color: #ffffff;
+        width: 100%;
+}
+
+.contact_text h1 p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact_text h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 30px;
+    
+}
+.contact_text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+.form1 {
+    font-style: 'Open Sans', sans-serif;
+}
+.form1 input {
+    display:flex;
+    flex-direction: column;
+    column-width: 30px;
+    align-items: center;
+    justify-content: center;
+    margin:5px auto;
+    width: 50%;
+    height:25px;
+    border: 1px solid #acacac;
+    border-radius: 4px;
+}
+.form1 label {
+    display:flex;
+    flex-direction: column;
+    margin:5px ;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    color:#031214;
+}
+.form2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form2 label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px;
+    padding: 10px;
+    background-color: antiquewhite;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+.form2 select{
+    width: 80%;
+    margin-left: 9%;
+    padding: 10px;
+    border: 1px solid #acacac;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 12px;
+    margin-bottom:10px;
+}
+button {
+    display: flex;
+    background-color: #00a0d1;
+    border-radius: 4px;
+    color: white;
+    padding: 6px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 38%;
+    cursor: pointer;
+  }
+button p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    
+}
+
+.resultadoContenedor {
+display:inline;
+float: left;
+align-items: center;
+align-content: center;
+margin-top: 10px;
+margin-left: 30px;
+}
+.resultadoContenedor h2{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 20px;
+}
+.resultadoContenedor textarea {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+}
+/*Fin Escritorio*/
+
+/*Tablet*/
+@media (min-width: 576px) and (max-width: 1199.97px) {
+    body {
+        background-image: linear-gradient(to bottom right, rgb(255, 255, 255),rgb(0, 140, 255));
+        background-size: 150%;
+    }
+    .back-ground {
+        background-image: linear-gradient(to bottom right, rgb(0, 140, 255), rgb(255, 255, 255));
+        border-radius: 20px;
+        border-color: white;
+        border-style: solid;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        width: 80%;
+        margin-top: 10px;
+        margin-left:10%;
+        padding: 20px;    
+    }
+    .banner_text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display SC', serif;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            margin:0;
+            background-color: #ffffff;
+            width: 100%;
+    }
+    
+    
+    button {
+        display: flex;
+        background-color: #00a0d1;
+        border-radius: 4px;
+        color: white;
+        padding: 6px 25px;
+        text-decoration: none;
+        margin-top: 20px;
+        margin-left: 38%;
+        cursor: pointer;
+      }
+    button p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        text-align: center;
+        
+    }
+    
+    .resultadoContenedor {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    margin-right: 30px;
+    }
+    .resultadoContenedor h2{
+        font-family: 'Playfair Display SC', serif;
+        font-size: 20px;
+    }
+    .resultadoContenedor textarea {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #ffffff;
+        width: 400px;
+        height: 200px;
+    }
+}
+
+/*Movil*/
+
+@media (max-width: 575.98px) {
+    body {
+        background-image: linear-gradient(to bottom right, rgb(255, 255, 255),rgb(0, 140, 255));
+        background-size: 150%;
+    }
+    .back-ground {
+        background-image: linear-gradient(to bottom right, rgb(0, 140, 255), rgb(255, 255, 255));
+        border-radius: 20px;
+        border-color: white;
+        border-style: solid;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        width: 80%;
+        margin-top: 10px;
+        margin-left:10%;
+        padding: 20px;    
+    }
+    .banner_text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display SC', serif;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            margin:0;
+            background-color: #ffffff;
+            width: 100%;
+    }
+    
+    
+    button {
+        display: flex;
+        background-color: #00a0d1;
+        border-radius: 4px;
+        color: white;
+        padding: 6px 20px;
+        text-decoration: none;
+        margin-top: 20px;
+        margin-left: 38%;
+        cursor: pointer;
+      }
+    button p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        text-align: center;
+        
+    }
+    
+    .resultadoContenedor {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    }
+    .resultadoContenedor h2{
+        font-family: 'Playfair Display SC', serif;
+        font-size: 20px;
+    }
+    .resultadoContenedor textarea {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #ffffff;
+        width: 250px;
+        height: 200px;
+    }
+}

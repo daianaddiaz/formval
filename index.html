@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio&family=Playfair+Display+SC&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <title>Seguro No Pagamos Cooperativa</title>
+</head>
+<body>
+    <header>
+        <div class="banner_text">
+            <h1>SEGURO NO PAGAMOS COOPERATIVA</h1>
+        </div>
+    </header>
+<div class="back-ground">
+    <section class="contacto">
+        <div class="contact_text">
+            <h1>Contacto</h1>
+            <p>Completa tus datos para poder contactarnos con usted!</p>
+        </div>
+        <div class="formulario">
+            <form action="" id="formulario" method='POST' onsubmit="return MySubmit()">
+                <div class="form1">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                    <label>Apellido</label>
+                    <input type="text" name="apellido" id="apellido" required>
+                    <label>DNI</label>
+                    <input type="number" name="dni" id="dni" required>
+                    <label>Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <label>Teléfono</label>
+                    <input type="number" name="tel" id="tel" required>
+                </div>
+                <div class="form2">
+                    <label>Tipo de Seguro</label><br>
+                    <select  id="seguro" required>
+                        <option value="500" selected>Básico</option>
+                        <option value="1000">Intermedio</option>
+                        <option value="1500">Premium</option>
+                    </select>    
+                    <label class="valor_seguro">Valor del seguro seleccionado</label>
+                    <input disabled id="seguroValor">                     
+                    </div>
+            <button onclick='submit()' id="submit" type="Submit" value="Submit"><p>Enviar</p></button>
+        </form>
+        </div>
+    </section> 
+    <div class="resultadoContenedor" id="resultadoContenedor">
+            <h2>Datos ingresados:</h2>
+            <textarea id="resultadoContenido" cols="50" rows="10" disabled></textarea>
+        <button onclick='submit()' id="resultadoReiniciar" type="Submit" value="Submit"><p>Reiniciar</p></button>
+    </div>
+</div>
+<script type="application/javascript">
+        let formulario = document.getElementById("formulario");
+        let seguro = document.getElementById("seguro");
+        let seguroValor = document.getElementById("seguroValor");
+        let resultadoContenido = document.getElementById("resultadoContenido");
+        let resultadoContenedor = document.getElementById("resultadoContenedor");
+        let resultadoReiniciar = document.getElementById("resultadoReiniciar");
+
+        window.addEventListener("load", actualizarSeguroValor);
+        seguro.addEventListener("change", actualizarSeguroValor);
+        formulario.addEventListener("submit", procesarFormulario);
+        resultadoReiniciar.addEventListener("click", ocultarResultadoContenedor);
+
+        function actualizarSeguroValor() {
+            seguroValor.value = seguro.value + "$";
+        }
+
+        function ocultarResultadoContenedor() {
+            resultadoContenedor.style.display = "none";
+        }
+
+        function procesarFormulario(evento) {
+            resultadoContenido.value =
+                `Nombre: ${document.getElementById("nombre").value} \n` +
+                `Apellido: ${document.getElementById("apellido").value} \n` +
+                `DNI: ${document.getElementById("dni").value} \n` +
+                `Email: ${document.getElementById("email").value} \n` +
+                `Teléfono: ${document.getElementById("tel").value} \n` +
+                `Tipo de seguro: ${seguro.options[seguro.selectedIndex].text} \n` +
+                `Valor del seguro: ${seguroValor.value}`;
+
+            resultadoContenedor.style.display = "inline-block";
+            evento.preventDefault();
+        }
+</script>
+</body>
+</html>
+
